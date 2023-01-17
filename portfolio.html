@@ -1,71 +1,76 @@
 <!DOCTYPE html>
 <html lang="pl">
+    <!-- Nagłówek z tagami meta oraz tytułem i opisem-->
     <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Portfolio</title>
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-            integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!-- Normalizator -->
+        <link rel="stylesheet" href="css/modern-normalize.css" />
+        <!-- Czcionki -->
         <link
             href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="./css/styles.css" />
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="css/main.min.css" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio</title>
+        <meta name="description" content="WebStudio - Portfolio" />
     </head>
-    <body>
-        <!--Nagłówek-->
-        <header class="header-wrapper">
-            <div class="container">
-                <div class="menu-left">
+    <body class="webstudio">
+        <header class="menu">
+            <div class="container flex">
+                <!-- Logo -->
+                <div class="flex menu__left">
                     <a href="index.html" class="logo"
-                        >Web<span class="studio-black">Studio</span>
+                        >Web<span class="logo__header">Studio</span>
                     </a>
-                    <!--lista menu-->
+                    <!-- Menu górne-->
                     <nav>
-                        <ul class="nav-list">
-                            <li>
-                                <a class="nav-list-item" href="index.html"
+                        <ul class="flex menu__links">
+                            <li class="list-item">
+                                <a href="index.html" class="menu__hyperlink"
                                     >Agencja</a
                                 >
                             </li>
-                            <li class="is-active">
+                            <li class="list-item">
                                 <a
-                                    class="nav-list-item is-active"
                                     href="portfolio.html"
-                                    >Portfolio</a
+                                    class="menu__hyperlink menu__hyperlink--is-active"
                                 >
+                                    Portfolio
+                                </a>
                             </li>
-                            <li>
-                                <a class="nav-list-item" href="#">Kontakt</a>
+                            <li class="list-item">
+                                <a href="#" class="menu__hyperlink">Kontakt</a>
                             </li>
                         </ul>
                     </nav>
                 </div>
-                <!-- kontakt -->
-                <ul class="contact-list">
-                    <li class="contact-list-item">
-                        <a href="mailto:info@devstudio.com" class="contact">
-                            <svg class="envelope">
+                <!-- dane teleadresowe-->
+
+                <ul class="flex menu__right">
+                    <li class="list-item">
+                        <a
+                            href="mailto:info@devstudio.com"
+                            class="contact contact--header"
+                        >
+                            <svg width="16" height="12" class="icon icon--top">
                                 <use
-                                    href="./images/icons.svg#icon-envelope"
+                                    href="images/icons.svg#icon-envelope"
                                 ></use>
                             </svg>
                             info@devstudio.com
                         </a>
                     </li>
-                    <li class="contact-list-item">
-                        <a href="tel:+48111111111" class="contact">
-                            <svg class="phone">
+                    <li class="list-item">
+                        <a
+                            href="tel:+48111111111"
+                            class="contact contact--header"
+                        >
+                            <svg width="10" height="16" class="icon icon--top">
                                 <use
-                                    href="./images/icons.svg#icon-smartphone"
+                                    href="images/icons.svg#icon-smartphone"
                                 ></use>
                             </svg>
                             +48 111 111 111
@@ -74,61 +79,66 @@
                 </ul>
             </div>
         </header>
-        <!--Zawartość strony-->
+
         <main>
-            <section class="section">
+            <!-- Menu z filtrami - lista buttonów-->
+            <section class="section section--article">
                 <div class="container">
-                    <ul class="category-buttons">
-                        <li>
+                    <ul>
+                        <li class="list-item list-item--button">
                             <button
                                 type="button"
-                                value="Wszystkie"
-                                class="button"
+                                class="button button--project"
                             >
                                 Wszystkie
                             </button>
                         </li>
-                        <li>
-                            <button type="button" value="Strony" class="button">
+                        <li class="list-item list-item--button">
+                            <button
+                                type="button"
+                                class="button button--project"
+                            >
                                 Strony
                             </button>
                         </li>
-                        <li>
+                        <li class="list-item list-item--button">
                             <button
                                 type="button"
-                                value="Aplikacje"
-                                class="button"
+                                class="button button--project"
                             >
                                 Aplikacje
                             </button>
                         </li>
-                        <li>
-                            <button type="button" value="Dizajn" class="button">
+                        <li class="list-item list-item--button">
+                            <button
+                                type="button"
+                                class="button button--project"
+                            >
                                 Dizajn
                             </button>
                         </li>
-                        <li>
+                        <li class="list-item list-item--button">
                             <button
                                 type="button"
-                                value="Marketing"
-                                class="button"
+                                class="button button--project"
                             >
                                 Marketing
                             </button>
                         </li>
                     </ul>
-
-                    <ul class="portfolio-projects">
-                        <li>
-                            <figure>
-                                <div class="portfolio-overlay-box">
+                    <!-- Sekcja z obrazkami-->
+                    <ul class="box-grid">
+                        <li class="list-item">
+                            <figure tabindex="0" class="project-box">
+                                <div class="project-box__text-box">
                                     <img
-                                        src="images/techno-crack.jpg"
-                                        alt="Technocrack"
+                                        class="project-picture"
+                                        src="images/portfolio/technocrack.jpg"
+                                        alt="Elegancki projekt strony internetowej"
                                         width="370"
                                         height="294"
                                     />
-                                    <p>
+                                    <p class="project-box__text">
                                         Technocrack jest popularną platformą
                                         wykorzystywaną do rozpowszechniania
                                         koronawirusa. Firmy wykorzystują tę
@@ -137,246 +147,229 @@
                                         konkurencji
                                     </p>
                                 </div>
-                                <figcaption>
-                                    <span class="portfolio-name"
-                                        >Technocrack</span
-                                    >
-                                    <span class="portfolio-category"
-                                        >Strona internetowa</span
-                                    >
+                                <figcaption class="project-box__caption">
+                                    <h3 class="project-box__title">
+                                        Technocrack
+                                    </h3>
+                                    <p class="project-box__description">
+                                        Strona internetowa
+                                    </p>
                                 </figcaption>
                             </figure>
                         </li>
-
-                        <li>
-                            <figure>
-                                <div class="portfolio-overlay-box">
+                        <li class="list-item">
+                            <figure tabindex="0" class="project-box">
+                                <div class="project-box__text-box">
                                     <img
-                                        src="images/NOvsGS.jpg"
-                                        alt="Grafika New Orlean vs Golden Star"
+                                        class="project-picture"
+                                        src="images/portfolio/new_orlean.jpg"
+                                        alt="dwóch koszykarzy walczy o piłkę"
                                         width="370"
                                         height="294"
                                     />
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit. Possimus impedit sint
-                                        ullam accusantium accusamus, voluptas
-                                        rerum maiores labore commodi veritatis
-                                        incidunt deserunt veniam sequi, officia,
-                                        aliquam delectus praesentium magnam
-                                        reiciendis!
+                                    <p class="project-box__text">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Odio deserunt in
+                                        delectus, aspernatur debitis quia
+                                        dolores sed ducimus similique culpa.
                                     </p>
                                 </div>
-                                <figcaption>
-                                    <span class="portfolio-name"
-                                        >Grafika New Orlean vs Golden Star</span
-                                    >
-                                    <span class="portfolio-category"
-                                        >Dizajn</span
-                                    >
+                                <figcaption class="project-box__caption">
+                                    <h3 class="project-box__title">
+                                        Grafika New Orlean vs Golden Star
+                                    </h3>
+                                    <p class="project-box__description">
+                                        Dizajn
+                                    </p>
                                 </figcaption>
                             </figure>
                         </li>
-                        <li>
-                            <figure>
-                                <div class="portfolio-overlay-box">
+                        <li class="list-item">
+                            <figure tabindex="0" class="project-box">
+                                <div class="project-box__text-box">
                                     <img
-                                        src="images/restaurant-seafood.jpg"
-                                        alt="Restauracja Seafood"
+                                        class="project-picture"
+                                        src="images/portfolio/seafood.jpg"
+                                        alt="Logo restauracji The Seafood Restaurant z owocami morza"
                                         width="370"
                                         height="294"
                                     />
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit. Possimus impedit sint
-                                        ullam accusantium accusamus, voluptas
-                                        rerum maiores labore commodi veritatis
-                                        incidunt deserunt veniam sequi, officia,
-                                        aliquam delectus praesentium magnam
-                                        reiciendis!
+                                    <p class="project-box__text">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Odio deserunt in
+                                        delectus, aspernatur debitis quia
+                                        dolores sed ducimus similique culpa.
                                     </p>
                                 </div>
-                                <figcaption>
-                                    <span class="portfolio-name"
-                                        >Restauracja Seafood</span
-                                    >
-                                    <span class="portfolio-category"
-                                        >Aplikacja</span
-                                    >
+                                <figcaption class="project-box__caption">
+                                    <h3 class="project-box__title">
+                                        Restauracja Seafood
+                                    </h3>
+                                    <p class="project-box__description">
+                                        Aplikacja
+                                    </p>
                                 </figcaption>
                             </figure>
                         </li>
-                        <li>
-                            <figure>
-                                <div class="portfolio-overlay-box">
+                        <li class="list-item">
+                            <figure tabindex="0" class="project-box">
+                                <div class="project-box__text-box">
                                     <img
-                                        src="images/project-prime.jpg"
-                                        alt="Projekt Prime"
+                                        class="project-picture"
+                                        src="images/portfolio/prime.jpg"
+                                        alt="Wysokiej jakości słuchawki"
                                         width="370"
                                         height="294"
                                     />
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit. Possimus impedit sint
-                                        ullam accusantium accusamus, voluptas
-                                        rerum maiores labore commodi veritatis
-                                        incidunt deserunt veniam sequi, officia,
-                                        aliquam delectus praesentium magnam
-                                        reiciendis!
+                                    <p class="project-box__text">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Odio deserunt in
+                                        delectus, aspernatur debitis quia
+                                        dolores sed ducimus similique culpa.
                                     </p>
                                 </div>
-                                <figcaption>
-                                    <span class="portfolio-name"
-                                        >Projekt Prime</span
-                                    >
-                                    <span class="portfolio-category"
-                                        >Marketing</span
-                                    >
+                                <figcaption class="project-box__caption">
+                                    <h3 class="project-box__title">
+                                        Projekt Prime
+                                    </h3>
+                                    <p class="project-box__description">
+                                        Marketing
+                                    </p>
                                 </figcaption>
                             </figure>
                         </li>
-                        <li>
-                            <figure>
-                                <div class="portfolio-overlay-box">
+                        <li class="list-item">
+                            <figure tabindex="0" class="project-box">
+                                <div class="project-box__text-box">
                                     <img
-                                        src="images/project-boxes.jpg"
-                                        alt="Projekt Boxes"
+                                        class="project-picture"
+                                        src="images/portfolio/boxes.jpg"
+                                        alt="dwa pudełka z nadrukiem"
                                         width="370"
                                         height="294"
                                     />
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit. Possimus impedit sint
-                                        ullam accusantium accusamus, voluptas
-                                        rerum maiores labore commodi veritatis
-                                        incidunt deserunt veniam sequi, officia,
-                                        aliquam delectus praesentium magnam
-                                        reiciendis!
+                                    <p class="project-box__text">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Odio deserunt in
+                                        delectus, aspernatur debitis quia
+                                        dolores sed ducimus similique culpa.
                                     </p>
                                 </div>
-                                <figcaption>
-                                    <span class="portfolio-name"
-                                        >Projekt Boxes</span
-                                    >
-                                    <span class="portfolio-category"
-                                        >Aplikacja</span
-                                    >
+                                <figcaption class="project-box__caption">
+                                    <h3 class="project-box__title">
+                                        Projekt Boxes
+                                    </h3>
+                                    <p class="project-box__description">
+                                        Aplikacja
+                                    </p>
                                 </figcaption>
                             </figure>
                         </li>
-                        <li>
-                            <figure>
-                                <div class="portfolio-overlay-box">
+                        <li class="list-item">
+                            <figure tabindex="0" class="project-box">
+                                <div class="project-box__text-box">
                                     <img
-                                        src="images/inspiration-has-no-borders.jpg"
-                                        alt="Inspiration has no Borders"
+                                        class="project-picture"
+                                        src="images/portfolio/inspiration.jpg"
+                                        alt="projekt strony internetowej"
                                         width="370"
                                         height="294"
                                     />
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit. Possimus impedit sint
-                                        ullam accusantium accusamus, voluptas
-                                        rerum maiores labore commodi veritatis
-                                        incidunt deserunt veniam sequi, officia,
-                                        aliquam delectus praesentium magnam
-                                        reiciendis!
+                                    <p class="project-box__text">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Odio deserunt in
+                                        delectus, aspernatur debitis quia
+                                        dolores sed ducimus similique culpa.
                                     </p>
                                 </div>
-                                <figcaption>
-                                    <span class="portfolio-name"
-                                        >Inspiration has no Borders</span
-                                    >
-                                    <span class="portfolio-category"
-                                        >Strona internetowa</span
-                                    >
+                                <figcaption class="project-box__caption">
+                                    <h3 class="project-box__title">
+                                        Inspiration has no Borders
+                                    </h3>
+                                    <p class="project-box__description">
+                                        Strona internetowa
+                                    </p>
                                 </figcaption>
                             </figure>
                         </li>
-                        <li>
-                            <figure>
-                                <div class="portfolio-overlay-box">
+                        <li class="list-item">
+                            <figure tabindex="0" class="project-box">
+                                <div class="project-box__text-box">
                                     <img
-                                        src="images/magazyn-limited-edition.jpg"
-                                        alt="Magazyn Limited Edition"
+                                        class="project-picture"
+                                        src="images/portfolio/limited_edition.jpg"
+                                        alt="projekt czasopisma"
                                         width="370"
                                         height="294"
                                     />
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit. Possimus impedit sint
-                                        ullam accusantium accusamus, voluptas
-                                        rerum maiores labore commodi veritatis
-                                        incidunt deserunt veniam sequi, officia,
-                                        aliquam delectus praesentium magnam
-                                        reiciendis!
+                                    <p class="project-box__text">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Odio deserunt in
+                                        delectus, aspernatur debitis quia
+                                        dolores sed ducimus similique culpa.
                                     </p>
                                 </div>
-                                <figcaption>
-                                    <span class="portfolio-name"
-                                        >Magazyn Limited Edition</span
-                                    >
-                                    <span class="portfolio-category"
-                                        >Dizajn</span
-                                    >
+                                <figcaption class="project-box__caption">
+                                    <h3 class="project-box__title">
+                                        Magazyn Limited Edition
+                                    </h3>
+                                    <p class="project-box__description">
+                                        Dizajn
+                                    </p>
                                 </figcaption>
                             </figure>
                         </li>
-                        <li>
-                            <figure>
-                                <div class="portfolio-overlay-box">
+                        <li class="list-item">
+                            <figure tabindex="0" class="project-box">
+                                <div class="project-box__text-box">
                                     <img
-                                        src="images/project-lab.jpg"
-                                        alt="Projekt LAB"
+                                        class="project-picture"
+                                        src="images/portfolio/projekt_lab.jpg"
+                                        alt="metka z napisem lab el tag"
                                         width="370"
                                         height="294"
                                     />
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit. Possimus impedit sint
-                                        ullam accusantium accusamus, voluptas
-                                        rerum maiores labore commodi veritatis
-                                        incidunt deserunt veniam sequi, officia,
-                                        aliquam delectus praesentium magnam
-                                        reiciendis!
+                                    <p class="project-box__text">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Odio deserunt in
+                                        delectus, aspernatur debitis quia
+                                        dolores sed ducimus similique culpa.
                                     </p>
                                 </div>
-                                <figcaption>
-                                    <span class="portfolio-name"
-                                        >Projekt LAB</span
-                                    >
-                                    <span class="portfolio-category"
-                                        >Marketing</span
-                                    >
+                                <figcaption class="project-box__caption">
+                                    <h3 class="project-box__title">
+                                        Projekt LAB
+                                    </h3>
+                                    <p class="project-box__description">
+                                        Marketing
+                                    </p>
                                 </figcaption>
                             </figure>
                         </li>
-                        <li>
-                            <figure>
-                                <div class="portfolio-overlay-box">
+                        <li class="list-item">
+                            <figure tabindex="0" class="project-box">
+                                <div class="project-box__text-box">
                                     <img
-                                        src="images/growing-buisness.jpg"
-                                        alt="Growing Buisiness"
+                                        class="project-picture"
+                                        src="images/portfolio/growing_business.jpg"
+                                        alt="laptop z włączoną aplikacją growing business"
                                         width="370"
                                         height="294"
                                     />
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit. Possimus impedit sint
-                                        ullam accusantium accusamus, voluptas
-                                        rerum maiores labore commodi veritatis
-                                        incidunt deserunt veniam sequi, officia,
-                                        aliquam delectus praesentium magnam
-                                        reiciendis!
+                                    <p class="project-box__text">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Odio deserunt in
+                                        delectus, aspernatur debitis quia
+                                        dolores sed ducimus similique culpa.
                                     </p>
                                 </div>
-                                <figcaption>
-                                    <span class="portfolio-name"
-                                        >Growing Business</span
-                                    >
-                                    <span class="portfolio-category"
-                                        >aplikacja</span
-                                    >
+                                <figcaption class="project-box__caption">
+                                    <h3 class="project-box__title">
+                                        Growing Business
+                                    </h3>
+                                    <p class="project-box__description">
+                                        Aplikacja
+                                    </p>
                                 </figcaption>
                             </figure>
                         </li>
@@ -384,87 +377,127 @@
                 </div>
             </section>
         </main>
-        <!--Stopka-->
-        <footer class="footer-wrapper">
-            <div class="footer container">
-                <div class="footer-content">
-                    <div>
-                        <a href="index.html" class="logo">
-                            <span>Web</span
-                            ><span class="studio-white">Studio</span>
-                        </a>
-                    </div>
-                    <address class="address">
-                        <span class="footer-address"
-                            >m. Warszawa, Aleje Jerozolimskie 21</span
-                        >
-
-                        <a class="footer-contact" href="mailto:info@example.com"
-                            >info@example.com</a
-                        >
-
-                        <a class="footer-contact" href="tel:+48111111111"
-                            >+48 111 111 111</a
-                        >
+        <!-- footer skopiowany z index.html -->
+        <footer class="bottom">
+            <div class="container flex">
+                <div>
+                    <a href="index.html" class="logo"
+                        >Web<span class="logo__footer">Studio</span></a
+                    >
+                    <address>
+                        <ul class="bottom__address">
+                            <li class="list-item contact">
+                                m. Warszawa, Aleje Jerozolimskie 21
+                            </li>
+                            <li class="list-item list-item--margin">
+                                <a
+                                    href="mailto:info@devstudio.com"
+                                    class="contact contact--footer"
+                                >
+                                    info@example.com
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a
+                                    href="tel:+48111111111"
+                                    class="contact contact--footer"
+                                    >+48 111 111 111</a
+                                >
+                            </li>
+                        </ul>
                     </address>
                 </div>
-                <div class="footer-join-us">
-                    <p>DOŁĄCZ DO NAS</p>
-                    <ul class="footer-join-us-icons">
-                        <li>
-                            <a href="#">
-                                <svg>
+                <div>
+                    <p class="bottom__header">dołącz do nas</p>
+                    <ul class="bottom__social-box">
+                        <li class="list-item">
+                            <a
+                                href="#"
+                                class="social-media social-media--footer"
+                            >
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    class="icon icon--social"
+                                >
                                     <use
-                                        href="./images/icons.svg#icon-instagram-2"
+                                        href="images/icons.svg#icon-instagram-2"
                                     ></use>
                                 </svg>
                             </a>
                         </li>
-                        <li>
-                            <a href="#">
-                                <svg>
+                        <li class="list-item">
+                            <a
+                                href="#"
+                                class="social-media social-media--footer"
+                            >
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    class="icon icon--social"
+                                >
                                     <use
-                                        href="./images/icons.svg#icon-twitter-1"
+                                        href="images/icons.svg#icon-twitter-1"
                                     ></use>
                                 </svg>
                             </a>
                         </li>
-                        <li>
-                            <a href="#">
-                                <svg>
+                        <li class="list-item">
+                            <a
+                                href="#"
+                                class="social-media social-media--footer"
+                            >
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    class="icon icon--social"
+                                >
                                     <use
-                                        href="./images/icons.svg#icon-facebook-1"
+                                        href="images/icons.svg#icon-facebook-1"
                                     ></use>
                                 </svg>
                             </a>
                         </li>
-                        <li>
-                            <a href="#">
-                                <svg>
+                        <li class="list-item">
+                            <a
+                                href="#"
+                                class="social-media social-media--footer"
+                            >
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    class="icon icon--social"
+                                >
                                     <use
-                                        href="./images/icons.svg#icon-linkedin-1"
+                                        href="images/icons.svg#icon-linkedin-1"
                                     ></use>
                                 </svg>
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div class="footer-newsletter">
-                    <p>ZAPISZ SIĘ DO NEWSLETTERA</p>
-                    <form class="footer-form">
+                <div>
+                    <p class="bottom__header">zapisz się do newslettera</p>
+                    <form class="newsletter">
+                        <label for="newsletter"></label>
                         <input
-                            type="email"
-                            name="email"
+                            name="newsletter"
+                            type="text"
+                            id="newsletter"
                             placeholder="E-mail"
-                            class="footer-form-input"
-                            required
+                            class="newsletter__email-box"
                         />
-                        <button type="submit" class="sign-up">
+                        <button
+                            type="submit"
+                            class="flex button button--cta button--newsletter"
+                        >
                             Zapisz się
-                            <svg width="24px" height="24px">
-                                <use
-                                    href="images/hw-06icons.svg#icon-icon-send"
-                                ></use>
+                            <svg
+                                width="24"
+                                height="24"
+                                class="icon icon--newsletter"
+                            >
+                                <use href="images/icons.svg#icon-send"></use>
                             </svg>
                         </button>
                     </form>

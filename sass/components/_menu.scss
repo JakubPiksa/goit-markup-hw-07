@@ -2,7 +2,7 @@
 @use '../utils/variables' as *;
 @use '../components/extends' as *;
 
-.menu {
+.header {
   padding: 1.5rem 0px 25px 0px;
   background-color: font-color('contrast');
   border-bottom: 1px solid $stroke-color;

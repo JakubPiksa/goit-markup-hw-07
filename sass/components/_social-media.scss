@@ -22,7 +22,8 @@
     &:hover,
     &:focus {
       background-color: $active;
-      color: font-color('contrast');
+      color: font-color('contrast'); 
+      
     }
   }
 }
